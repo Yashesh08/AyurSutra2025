@@ -31,7 +31,8 @@ export const OverallProgressChart: React.FC<OverallProgressChartProps> = ({ prog
                     data={data}
                     startAngle={90}
                     endAngle={-270}
-                >
+                    style={{ background: '#F7F3E9' }}
+                                >
                     <PolarAngleAxis
                         type="number"
                         domain={[0, 100]}
@@ -39,14 +40,16 @@ export const OverallProgressChart: React.FC<OverallProgressChartProps> = ({ prog
                         tick={false}
                     />
                     <RadialBar
-                        background
                         dataKey="value"
                         cornerRadius={10}
                         fill="#F7C873"
-                        // @ts-ignore
-                        background={{ fill: '#F7F3E9' }}
+                        background
                     />
                 </RadialBarChart>
+
+
+
+                
             </ResponsiveContainer>
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                 <p className="text-4xl font-bold text-saffron">{progress}%</p>
